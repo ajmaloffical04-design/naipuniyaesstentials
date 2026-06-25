@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --color-brand-navy: #102a45;
+  --color-brand-navy-light: #16385a;
+  --color-brand-gold: #f5a623;
+  --color-bg-cream: #fdfaf6;
+  --color-bg-light: #fdfdfc;
+  --color-text-dark: #1a1a1a;
+  --color-text-gray: #6b7280;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text-dark);
+  background: #ffffff;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-brand-navy);
+  color: white;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-brand-navy);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f7f3;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-navy);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-navy-light);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Typography utilities */
+.font-serif {
+  font-family: var(--font-manrope), sans-serif;
+}
