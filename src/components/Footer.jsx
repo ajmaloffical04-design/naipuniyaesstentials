@@ -32,20 +32,26 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-1 flex flex-col items-start pr-4">
-            <Link href="/" className="inline-block mb-6">
-              {/* Note: since logo is white text on dark in the mockup, using the same logo or an inverted one if exists. 
-                  Assuming public/logo.png works or they have a white one. In mockup it is white. */}
+            <Link href="/" className="inline-block mb-6 bg-white p-2 rounded-lg">
               <Image
                 src="/logo.png"
                 alt="Naipunya Logo"
                 width={140}
                 height={45}
-                className="object-contain brightness-0 invert"
+                className="object-contain"
               />
             </Link>
-            <p className="text-white/80 text-[13px] leading-relaxed mb-6">
-              Nature&apos;s pure essence, crafted for your wellbeing. Cold-pressed, chemical-free oils for a healthier lifestyle.
+            <p className="text-white/80 text-[13px] leading-relaxed mb-4">
+              Nature's pure essence, crafted for your wellbeing. Cold-pressed, chemical-free oils for a healthier lifestyle.
             </p>
+            <div className="text-white/80 text-[13px] leading-relaxed mb-6">
+              <strong>NAIPUNYA FOODS</strong><br />
+              Door No : 18/518 (2)<br />
+              Koppam<br />
+              Palakkad<br />
+              678001<br />
+              Ph: 9074342300
+            </div>
             <div className="flex gap-4">
               {/* Facebook */}
               <a href="#" className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#0e4da4] hover:border-transparent transition-all" aria-label="Facebook">
