@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import WhatsAppButton from "./WhatsAppButton";
 
 export default function ProductCard({ product }) {
   return (
@@ -33,12 +32,30 @@ export default function ProductCard({ product }) {
           {product.description}
         </p>
 
-        <div className="flex items-center justify-between mt-auto">
-          <div className="text-[#102a45] font-bold text-[17px]">
-            {product.priceRange}
+        <div className="flex flex-col mt-auto gap-4">
+          <div className="flex flex-wrap gap-1.5">
+            {product.sizes?.map((sizeStr) => {
+              const sizeLabel = sizeStr.split('–')[0].trim();
+              return (
+                <span key={sizeLabel} className="text-[11px] font-bold bg-gray-50 border border-gray-200 text-[#102a45] px-2.5 py-1 rounded-md">
+                  {sizeLabel}
+                </span>
+              );
+            })}
           </div>
 
-          <WhatsAppButton product={product} compact={true} />
+          <div className="flex items-center justify-between">
+            <div className="text-[#102a45] font-extrabold text-[17px]">
+              {product.priceRange}
+            </div>
+
+            <Link
+              href={`/products/${product.slug}`}
+              className="flex items-center justify-center gap-2 bg-[#102a45] text-white font-semibold text-[13px] px-5 py-2.5 rounded-[8px] hover:bg-[#16385a] hover:shadow-md transition-all duration-200"
+            >
+              Select Options
+            </Link>
+          </div>
         </div>
       </div>
     </div>
