@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    remotePatterns: [],
-    formats: ["image/webp"],
+    unoptimized: true,
   },
-  // Allow .png files to be served as images
 };
 
 export default nextConfig;
