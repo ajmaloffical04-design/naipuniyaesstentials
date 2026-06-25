@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/30 backdrop-blur-md shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)]">
@@ -50,13 +51,20 @@ export default function Navbar() {
               </svg>
             </div>
 
-            <div className="group relative flex items-center gap-1 cursor-pointer whitespace-nowrap">
+            <div className="group relative flex items-center gap-1 cursor-pointer whitespace-nowrap py-4">
               <span className="text-[#102a45] text-[13px] font-bold group-hover:text-[#f5a623] transition-colors">
                 Categories
               </span>
-              <svg className="w-3.5 h-3.5 text-[#102a45] group-hover:text-[#f5a623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-[#102a45] group-hover:text-[#f5a623] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
               </svg>
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-44 bg-white/95 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-[#102a45]/5">
+                <div className="py-2">
+                  <Link href="/products/coconut-oil" className="block px-5 py-2.5 text-[13px] text-[#102a45] hover:bg-[#f0f5fa] hover:text-[#f5a623] font-bold transition-colors">Coconut Oil</Link>
+                  <Link href="/products/deepam-oil" className="block px-5 py-2.5 text-[13px] text-[#102a45] hover:bg-[#f0f5fa] hover:text-[#f5a623] font-bold transition-colors">Deepam Oil</Link>
+                </div>
+              </div>
             </div>
 
             <Link href="/about" className="text-[#102a45] text-[13px] font-bold hover:text-[#f5a623] transition-colors whitespace-nowrap">
@@ -135,9 +143,26 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white/40 backdrop-blur-lg border-t border-white/20 px-4 pb-6 pt-2 shadow-lg">
+        <div className="md:hidden bg-white/40 backdrop-blur-lg border-t border-white/20 px-4 pb-6 pt-2 shadow-lg overflow-y-auto max-h-[80vh]">
           <Link href="/" className="block text-[#102a45] py-3 text-[14px] font-bold border-b border-[#102a45]/10" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/products" className="block text-[#102a45] py-3 text-[14px] font-bold border-b border-[#102a45]/10" onClick={() => setMenuOpen(false)}>Shop</Link>
+          
+          <div className="border-b border-[#102a45]/10">
+            <button 
+              onClick={() => setCategoriesOpen(!categoriesOpen)} 
+              className="w-full flex items-center justify-between text-[#102a45] py-3 text-[14px] font-bold"
+            >
+              Categories
+              <svg className={`w-4 h-4 transition-transform duration-200 ${categoriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${categoriesOpen ? 'max-h-40 opacity-100 mb-2' : 'max-h-0 opacity-0'}`}>
+              <Link href="/products/coconut-oil" className="block pl-4 py-2 text-[13px] text-[#102a45]/80 font-bold hover:text-[#f5a623]" onClick={() => setMenuOpen(false)}>Coconut Oil</Link>
+              <Link href="/products/deepam-oil" className="block pl-4 py-2 text-[13px] text-[#102a45]/80 font-bold hover:text-[#f5a623]" onClick={() => setMenuOpen(false)}>Deepam Oil</Link>
+            </div>
+          </div>
+
           <Link href="/about" className="block text-[#102a45] py-3 text-[14px] font-bold border-b border-[#102a45]/10" onClick={() => setMenuOpen(false)}>About Us</Link>
           <Link href="/contact" className="block text-[#102a45] py-3 text-[14px] font-bold border-b border-[#102a45]/10" onClick={() => setMenuOpen(false)}>Contact</Link>
         </div>

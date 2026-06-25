@@ -13,9 +13,9 @@ const products = [
       "Naipunya First Crush Coconut Oil is extracted using traditional cold-press methods that retain all the natural goodness of fresh coconuts. Rich in medium-chain fatty acids, it is perfect for cooking, deep conditioning hair, and nourishing skin.",
     benefits: ["100% Natural", "Cold Pressed", "No Chemicals", "Multi-purpose"],
     sizes: [
-      "250ml – ₹85 (MRP ₹90)",
-      "500ml – ₹165 (MRP ₹195)",
-      "1 Litre – ₹310 (MRP ₹365)"
+      "100ml – ₹85",
+      "500ml – ₹165",
+      "1 Litre – ₹310"
     ],
     featured: true,
   },
@@ -33,9 +33,9 @@ const products = [
       "Naipunya Deepam Oil is specially formulated for oil lamps and spiritual rituals. It burns with a clear, steady flame without producing soot, keeping your space sacred and serene.",
     benefits: ["Pure & Fragrant", "Long Lasting Flame", "No Soot", "Ritual Grade"],
     sizes: [
-      "250ml – ₹45 (MRP ₹52)",
-      "500ml – ₹85 (MRP ₹98)",
-      "1 Litre – ₹155 (MRP ₹178)"
+      "100ml – ₹45",
+      "500ml – ₹85",
+      "1 Litre – ₹155"
     ],
     featured: true,
   }

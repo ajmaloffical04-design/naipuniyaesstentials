@@ -95,10 +95,7 @@ export default function ProductDetailPage({ params }) {
 
             {/* Order CTA */}
             <div className="pt-2 flex flex-col gap-3">
-              <WhatsAppButton
-                productName={product.name}
-                price={product.price}
-              />
+              <WhatsAppButton product={product} />
               <Link
                 href="/products"
                 className="w-full text-center border-2 border-[#133261] text-[#133261] font-semibold py-3.5 rounded-2xl hover:bg-[#133261] hover:text-white transition-all"
