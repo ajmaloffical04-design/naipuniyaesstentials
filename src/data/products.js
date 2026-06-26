@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    slug: "first-crush-coconut-oil",
+    slug: "coconut-oil",
     name: "First Crush Coconut Oil",
     category: "Cooking Oils",
     priceRange: "₹85 – ₹310",
