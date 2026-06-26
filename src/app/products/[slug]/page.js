@@ -5,7 +5,9 @@ import products from "@/data/products";
 import ProductClient from "@/components/ProductClient";
 
 export async function generateStaticParams() {
-  return products.map((product) => ({ slug: product.slug }));
+  return products
+    .filter((product) => product.slug !== "coconut-oil" && product.slug !== "deepam-oil")
+    .map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }) {
