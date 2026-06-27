@@ -5,9 +5,15 @@ import products from "@/data/products";
 import ProductClient from "@/components/ProductClient";
 
 export async function generateStaticParams() {
-  return products
-    .filter((product) => product.slug !== "coconut-oil" && product.slug !== "deepam-oil")
-    .map((product) => ({ slug: product.slug }));
+  const dynamicProducts = products.filter(
+    (product) => product.slug !== "coconut-oil" && product.slug !== "deepam-oil"
+  );
+
+  if (dynamicProducts.length === 0) {
+    return [{ slug: "dummy" }];
+  }
+
+  return dynamicProducts.map((product) => ({ slug: product.slug }));
 }
 
 export async function generateMetadata({ params }) {
