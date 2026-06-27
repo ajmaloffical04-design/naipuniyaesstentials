@@ -16,29 +16,7 @@ export default function CoconutOilPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Custom Hero Banner for Coconut Oil */}
-      <div className="relative bg-[#102a45] overflow-hidden">
-        {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20 pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[140%] rounded-full bg-gradient-to-bl from-[#f5a623] to-transparent blur-3xl" />
-          <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[100%] rounded-full bg-gradient-to-tr from-white to-transparent blur-2xl" />
-        </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="max-w-2xl text-white">
-            <span className="inline-block py-1 px-3 rounded-full bg-[#f5a623]/20 text-[#f5a623] font-bold text-xs tracking-widest uppercase mb-6 border border-[#f5a623]/30">
-              Naipunya Essentials
-            </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-              Pure. Natural.<br />
-              <span className="text-[#f5a623]">Cold Pressed.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/80 mb-10 max-w-lg leading-relaxed font-medium">
-              Experience the unmatched purity of First Crush Coconut Oil. Extracted using traditional methods to preserve every drop of nature's goodness.
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Main Product Section */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
