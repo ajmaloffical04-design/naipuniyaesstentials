@@ -14,29 +14,6 @@ export default function DeepamOilPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Custom Hero Banner for Deepam Oil */}
-      <div className="relative bg-gradient-to-r from-[#4a1a2c] to-[#7c2840] overflow-hidden">
-        {/* Background Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30 pointer-events-none">
-          <div className="absolute top-[10%] left-[20%] w-[40%] h-[80%] rounded-full bg-gradient-to-tr from-[#f5a623] to-[#ffda8a] blur-3xl opacity-40 mix-blend-screen" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[50%] h-[70%] rounded-full bg-[#102a45] blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="max-w-2xl text-white">
-            <span className="inline-block py-1 px-3 rounded-full bg-[#f5a623]/20 text-[#ffda8a] font-bold text-xs tracking-widest uppercase mb-6 border border-[#f5a623]/30">
-              Sacred Offerings
-            </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-              A Steady Flame <br />
-              <span className="text-[#f5a623]">For Inner Peace.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-lg leading-relaxed font-medium">
-              Illuminate your sacred spaces with Naipunya Deepam Oil. Specially formulated for a soot-free, long-lasting, and fragrant glow.
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Main Product Section */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
