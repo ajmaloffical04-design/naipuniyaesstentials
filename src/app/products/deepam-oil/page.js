@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Flame, Wind, Hourglass, Flower2 } from "lucide-react";
 import products from "@/data/products";
 import ProductClient from "@/components/ProductClient";
 import { notFound } from "next/navigation";
@@ -37,33 +38,33 @@ export default function DeepamOilPage() {
               />
               
               {/* Decorative badges */}
-              <div className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#7c2840] text-xs font-bold px-4 py-2 rounded-full">
-                🔥 Steady Flame
+              <div className="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#7c2840] text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
+                <Flame className="w-4 h-4" /> Steady Flame
               </div>
-              <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#7c2840] text-xs font-bold px-4 py-2 rounded-full">
-                ✨ Zero Soot
+              <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#7c2840] text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
+                <Wind className="w-4 h-4" /> Zero Soot
               </div>
             </div>
 
             {/* Custom Benefits Grid just for Deepam Oil */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">🪔</div>
+                <div className="text-[#4a1a2c] mb-3"><Flame className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#4a1a2c] mb-2">Sacred Rituals</h3>
                 <p className="text-sm text-gray-500">Perfectly blended for daily poojas and festive lighting.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">💨</div>
+                <div className="text-[#4a1a2c] mb-3"><Wind className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#4a1a2c] mb-2">Smoke Free</h3>
                 <p className="text-sm text-gray-500">Burns cleanly without releasing harmful black smoke or soot.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">⏳</div>
+                <div className="text-[#4a1a2c] mb-3"><Hourglass className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#4a1a2c] mb-2">Long Lasting</h3>
                 <p className="text-sm text-gray-500">Optimized viscosity ensures the oil lasts longer per lighting.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">🌸</div>
+                <div className="text-[#4a1a2c] mb-3"><Flower2 className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#4a1a2c] mb-2">Mild Fragrance</h3>
                 <p className="text-sm text-gray-500">Infused with a subtle divine aroma to elevate your spiritual space.</p>
               </div>

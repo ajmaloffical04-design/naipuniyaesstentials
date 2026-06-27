@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Leaf, CheckCircle2, Utensils, Sparkles, Droplet, Baby } from "lucide-react";
 import products from "@/data/products";
 import ProductClient from "@/components/ProductClient";
 import { notFound } from "next/navigation";
@@ -57,33 +58,33 @@ export default function CoconutOilPage() {
               />
               
               {/* Decorative badges */}
-              <div className="absolute top-6 left-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#102a45] text-xs font-bold px-4 py-2 rounded-full">
-                🌿 100% Pure
+              <div className="absolute top-6 left-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#102a45] text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
+                <Leaf className="w-4 h-4" /> 100% Pure
               </div>
-              <div className="absolute bottom-6 right-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#102a45] text-xs font-bold px-4 py-2 rounded-full">
-                🥥 Edible Grade
+              <div className="absolute bottom-6 right-6 z-20 bg-white/90 backdrop-blur shadow-sm border border-white/50 text-[#102a45] text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4" /> Edible Grade
               </div>
             </div>
 
             {/* Custom Benefits Grid just for Coconut Oil */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">🍳</div>
+                <div className="text-[#102a45] mb-3"><Utensils className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#102a45] mb-2">For Cooking</h3>
                 <p className="text-sm text-gray-500">Perfect for frying, baking, and adding authentic flavor to your dishes.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">✨</div>
+                <div className="text-[#102a45] mb-3"><Sparkles className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#102a45] mb-2">For Skin</h3>
                 <p className="text-sm text-gray-500">A natural moisturizer that deeply hydrates and nourishes your skin.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">💆‍♀️</div>
+                <div className="text-[#102a45] mb-3"><Droplet className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#102a45] mb-2">For Hair</h3>
                 <p className="text-sm text-gray-500">Strengthens roots, adds shine, and prevents protein loss.</p>
               </div>
               <div className="bg-[#fcfdfd] border border-gray-100 p-6 rounded-2xl">
-                <div className="text-3xl mb-3">👶</div>
+                <div className="text-[#102a45] mb-3"><Baby className="w-8 h-8" /></div>
                 <h3 className="font-bold text-[#102a45] mb-2">For Baby</h3>
                 <p className="text-sm text-gray-500">Gentle and safe for baby massages and preventing diaper rash.</p>
               </div>
