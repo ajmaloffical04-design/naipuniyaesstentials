@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function ProductsPage() {
   return (
-    <div className="min-h-screen bg-[#f9f7f3]">
+    <div className="min-h-screen bg-[#f9f7f3] pt-[100px]">
       {/* Page Header */}
       <div className="bg-gradient-to-br from-[#133261] to-[#1a4a8a] py-16 text-center">
         <p className="text-[#f5a623] text-sm font-bold uppercase tracking-widest mb-2">Our Range</p>

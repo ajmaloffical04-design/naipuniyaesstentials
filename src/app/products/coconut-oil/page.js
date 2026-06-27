@@ -14,7 +14,7 @@ export default function CoconutOilPage() {
   if (!product) notFound();
 
   return (
-    <div className="min-h-screen bg-white pt-[110px]">
+    <div className="min-h-screen bg-white pt-[130px]">
 
       {/* Main Product Section */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-24">
