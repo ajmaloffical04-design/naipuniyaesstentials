@@ -48,12 +48,12 @@ export default function ProductDetailPage({ params }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* Left Column: Image Gallery */}
-          <div className="sticky top-24 flex flex-col-reverse md:flex-row gap-6 h-[500px] md:h-[650px]">
+          <div className="lg:sticky lg:top-24 flex flex-col-reverse md:flex-row gap-6 h-[350px] md:h-[550px]">
             {/* Thumbnails (using same image for now to simulate layout) */}
             <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible no-scrollbar pb-2 md:pb-0">
               {[1, 2, 3].map((thumb) => (
-                <div key={thumb} className={`relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 bg-[#fdf6e3] rounded-2xl overflow-hidden cursor-pointer border-2 transition-all ${thumb === 1 ? "border-[#0051ff]" : "border-transparent hover:border-[#133261]/20"}`}>
-                  <Image src={product.image} alt={product.name} fill className="object-contain p-2" sizes="96px" />
+                <div key={thumb} className={`relative w-16 h-16 md:w-20 md:h-20 flex-shrink-0 bg-[#fdf6e3] rounded-xl overflow-hidden cursor-pointer border-2 transition-all ${thumb === 1 ? "border-[#0051ff]" : "border-transparent hover:border-[#133261]/20"}`}>
+                  <Image src={product.image} alt={product.name} fill className="object-contain p-2" sizes="80px" />
                 </div>
               ))}
             </div>
@@ -64,7 +64,7 @@ export default function ProductDetailPage({ params }) {
                 src={product.image}
                 alt={product.name}
                 fill
-                className="object-contain p-8 md:p-12 hover:scale-105 transition-transform duration-700"
+                className="object-contain p-6 md:p-12 hover:scale-105 transition-transform duration-700"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
