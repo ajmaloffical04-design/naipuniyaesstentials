@@ -23,7 +23,7 @@ export default function CoconutOilPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* Left Column: Image & Highlights */}
-          <div className="sticky top-24 flex flex-col gap-8">
+          <div className="lg:sticky lg:top-24 flex flex-col gap-8">
             <div className="relative bg-gradient-to-br from-[#fdf6e3] to-[#fef3d0] rounded-3xl overflow-hidden shadow-lg h-[500px] md:h-[700px] border border-[#f5ead2] flex items-center justify-center p-12">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.8)_0%,rgba(255,255,255,0)_100%)]"></div>
               <Image

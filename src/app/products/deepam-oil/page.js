@@ -21,7 +21,7 @@ export default function DeepamOilPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* Left Column: Image & Highlights */}
-          <div className="sticky top-24 flex flex-col gap-8">
+          <div className="lg:sticky lg:top-24 flex flex-col gap-8">
             <div className="relative bg-gradient-to-br from-[#fff0f5] to-[#ffe4eb] rounded-3xl overflow-hidden shadow-lg h-[500px] md:h-[700px] border border-[#ffd1df] flex items-center justify-center p-12">
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,rgba(255,255,255,0)_100%)]"></div>
               
